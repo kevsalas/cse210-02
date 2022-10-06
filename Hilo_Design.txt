@@ -1,0 +1,32 @@
+
+Object(class - design by Matt): Dealer
+Responsibility: Hold cards numbered 1-13
+
+Behavior: Show a card to the user.
+	Method(Generate): Using random number generator, generate card between 1-13. 
+	Return:	Send data to main(Casino) to calculate score.
+		Also send data to Player to show result.
+
+
+Main Function: Casino
+Responsibility: Keep track of user chips (points)
+	Method: Intitilizes player and dealer. Alerts player if the gained 100 points or lost 75 points.
+	Method: Determine if player can keep playing by checking if player has 0 points. If 0 points, game over.
+	Method: Player should have the option to quit playing if they want to.
+
+Behavior: Countdown points. If still has points they can continue to play, if not, game over.
+
+
+Object(class): Player
+Behavior: Guesses if next card is higher or lower. Earn 100 points if guessed correctly. Lose 75 if guessed incorrectly.
+	Attribute: points (Start with 300)
+	Attribute: The card the player received from dealer
+
+
+Method: Pick card between 1-13. Raises or lowers points depending on the card picked.
+
+Method: Tells the user the remaining value of their chips(points). Answers question of whether or not they can keep playing.
+
+Method: If player reaches 0 points - game over
+
+Method: If player has more than 0 points they decide if they want to keep playing.
