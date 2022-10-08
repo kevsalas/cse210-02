@@ -39,21 +39,25 @@ class Player:
         guess_is_false_input = True
         while guess_is_false_input:
             self.guess = input("higher or lower? [h/l]")
-            if self.guess == "h" or self.guess == "l":
+            if self.guess.lower() == "h" or self.guess.lower() == "l":
                 guess_is_false_input = False
+            else:
+                print('Please Write "H" for Higher card or "L" for Lower card.')
 
     def play_again(self):
         play_again_input_is_false = True
         while play_again_input_is_false:
             play_again = input("Play again? [y/n]")
-            if play_again == "y":
+            if play_again.lower() == "y":
                 self.keep_playing = True
                 play_again_input_is_false = False
-            elif play_again == "n":
+            elif play_again.lower() == "n":
                 self.keep_playing = False
+                print("Thanks for playing!")
                 play_again_input_is_false = False
             else:
                 play_again_input_is_false = True
+                print('Please Write "Y" for "Yes" and "N" for "No"')
 
 
 """ Following lines used to test Player class. Uncomment and run player.py to test this class"""
