@@ -1,5 +1,5 @@
 from dealer import Dealer
-from hilo.game.player import Player
+from player import Player
 
 
 def main():
